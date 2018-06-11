@@ -1,8 +1,8 @@
 =begin
 Generar el código para imprimir la siguiente tabla:
 
- <table>
- <tbody>
+<table>
+<tbody>
   <tr>
     <td> 1 </td>
     <td> 2 </td>
@@ -21,6 +21,18 @@ Generar el código para imprimir la siguiente tabla:
     <td> 11 </td>
     <td> 12 </td>
   </tr>
-  <tbody>
- </table>
+<tbody>
+</table>
 =end
+a = "<table>\n<tbody>\n"
+num = 1
+3.times do |i|
+  a += "  <tr>\n" #Para crear las 3 columnas de tr
+  4.times do |i|
+    a += "    <td> #{num} </td>\n" #Para crear el contenido de cada td
+    num += 1
+  end
+a += "  </tr>\n"
+end
+a += "</tbody>\n</table>"
+puts a

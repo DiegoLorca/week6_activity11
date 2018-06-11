@@ -3,7 +3,10 @@
 
 a = ''
 10.times do |i|
-	
+  if (i+1).odd? #Muesta lo numeros Impar, muestra true o false
+    a +="#{i + 1}impar "
+  else
+    a +="#{i + 1}par "
+  end
 end
-
 puts a
